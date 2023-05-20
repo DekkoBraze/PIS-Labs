@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>982</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="codes">
+          <attribute name="title">
+           <string>Товары</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QTableWidget" name="codesTable"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="filialGoods">
+          <attribute name="title">
+           <string>Товары в филиалах</string>
+          </attribute>
+          <widget class="QTableWidget" name="filialTable">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>10</y>
+             <width>931</width>
+             <height>541</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="sold">
+          <attribute name="title">
+           <string>Проданные товары</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QTableWidget" name="soldTable"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>982</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAdd">
+    <property name="title">
+     <string>Действия</string>
+    </property>
+    <addaction name="movingToFilial"/>
+    <addaction name="check"/>
+    <addaction name="svodNaklad"/>
+    <addaction name="log"/>
+    <addaction name="history"/>
+   </widget>
+   <addaction name="menuAdd"/>
+  </widget>
+  <action name="movingToFilial">
+   <property name="text">
+    <string>Переместить в филиал...</string>
+   </property>
+  </action>
+  <action name="check">
+   <property name="text">
+    <string>Создать чек...</string>
+   </property>
+  </action>
+  <action name="svodNaklad">
+   <property name="text">
+    <string>Сформировать сводную накладную...</string>
+   </property>
+  </action>
+  <action name="log">
+   <property name="text">
+    <string>Файл протокола загрузки</string>
+   </property>
+  </action>
+  <action name="history">
+   <property name="text">
+    <string>Файл истории обмена</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

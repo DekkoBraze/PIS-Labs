@@ -1,0 +1,4 @@
+director: dir123
+zamDirector: zam123
+secretary: sec123
+guest

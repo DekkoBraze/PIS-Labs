@@ -1,0 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'exchangeRate/style.css' %}">
+{% if currency_list %}
+    <h1>Список валют</h1> <h3>(нажмите на валюте, чтобы посмотреть её котировку)</h3>
+    <ul>
+    {% for currency in currency_list %}
+        <li><a href="{% url 'exchangeRate:detail' currency.id %}">{{ currency.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Error: Look for your data!!!.</p>
+{% endif %}
